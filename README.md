@@ -50,8 +50,8 @@
 - belongs_to :pictures
 - belongs_to :tags
 
-##user_tagsテーブル
-Column|Type|Options|
+## user_tagsテーブル
+|Column|Type|Options|
 |------|----|-------|
 |usr_id|references|null: false, foreign_key: true|
 |tag_id|references|null: false, foreign_key: true|
