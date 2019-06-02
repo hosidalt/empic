@@ -1,0 +1,20 @@
+%html
+  %body
+    = render 'shared/header'
+    %main.top.clearfix
+      .top__content
+        %section.top__content__serch-pic
+          %nav.top__content__serch-pic__nav
+            %ul.select-pic
+              %li.select-pic__data
+                %span.select-pic__data__text
+                  新しい順
+              %li.select-pic__data
+                %span.select-pic__data__text
+                  古い順
+        %ul.top__serch-pic__tag.clearfix
+        %section.top__content__pic
+          .top__content__pic__box
+        %ul.pager
+          %li.pager__num
+    = render 'shared/footer'

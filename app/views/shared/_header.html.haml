@@ -1,0 +1,18 @@
+%header
+  .header-main
+    .header-main__top.clearfix
+      %h1
+        =link_to root_path, class: 'title' do
+          empic
+      %form{ class: 'input-search' }
+        %input{ placeholder: "タグから探す"}
+        %i.fa.fa-search
+      .header-main__top__right
+        %ul.right__block.clearfix
+          %li.right__block--element.clearfix
+            %i.fa.fa-picture-o 
+          %li.right__block--element.clearfix
+            %i.fa.fa-tags
+
+%nav.indicate-tag
+  .indicate-tag__content
