@@ -28,6 +28,7 @@ header {
   .header-main {
     width: 1020px;
     margin: 0 auto;
+    padding: 20px 0;
     &__top {
       display: flex;
       align-items: center;
@@ -35,6 +36,8 @@ header {
         color: white;
         text-decoration: none;
         font-family: '游ゴシック体';
+        font-weight: bold;
+        font-size: 35px;
       }
       .input-search {
         position: relative;
@@ -72,9 +75,13 @@ header {
           display: flex;
           &--element {
             margin-right: 28px;
+            #picture_image {
+              display: none;
+            }
             .fa-picture-o {
               font-size: 20px;
               color: white;
+              margin-left: 28px; 
             }
             .fa-tags {
               font-size: 20px;
@@ -106,12 +113,14 @@ header {
   width: 1380px;
   &__content {
     width: 100%;
+    height: calc(100vh - 200px);
     &__serch-pic {
       position: relative;
       height: 50px;
       margin: 0px 14px 0px 17px;
       &__nav {
         position: absolute;
+        padding-top: 15px;
         .select-pic {
           display: inline-block;
           &__data {
@@ -129,11 +138,13 @@ header {
         }
       }
     }
-    &__pic {
-      min-height: 550px;
-      &__box {
+    .pictures {
+      .picture {
         width: auto;
         margin: 0 auto;
+        &__box {
+          margin: 0 20px 20px 0;
+        }
       }
     }
     .pager {

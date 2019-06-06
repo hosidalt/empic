@@ -9,8 +9,10 @@
         %i.fa.fa-search
       .header-main__top__right
         %ul.right__block.clearfix
-          %li.right__block--element.clearfix
-            %i.fa.fa-picture-o 
+          = form_for (@picture) do |f|
+            %li.right__block--element.clearfix
+              %label.fa.fa-picture-o{for: 'picture_image'}
+                = f.file_field :image, class: 'fa fa-picture-o'
           %li.right__block--element.clearfix
             %i.fa.fa-tags
 
