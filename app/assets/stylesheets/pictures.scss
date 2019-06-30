@@ -23,6 +23,8 @@ li {
   list-style: none;
 }
 
+
+
 header {
   background-color: #e478ff;
   .header-main {
@@ -41,7 +43,7 @@ header {
       }
       .input-search {
         position: relative;
-        margin-left: 390px;
+        margin-left: 480px;
       }
       .input-search input {
         min-width: 400px;
@@ -69,30 +71,49 @@ header {
         color: rgb(255, 255, 255);
         cursor: pointer;
       }
+    }
+    &__setting {
       &__right {
         float: right;
-        .right__block {
-          display: flex;
-          &--element {
-            margin-right: 28px;
-            #picture_image {
-              display: none;
-            }
-            .fa-picture-o {
-              font-size: 20px;
-              color: white;
-              margin-left: 28px; 
-            }
-            .fa-tags {
-              font-size: 20px;
-              color: white;
-            }
+        .right__block--element {
+          margin-top: 10px;
+          .fa-tags {
+              font-size: 16px;
+              color: white; 
           }
         }
+        .block-post-pictur {
+          display: flex;
+          margin-top: 10px;
+        }
+
       }
     }
   }
 }
+
+
+      // .right__block {
+//           &--element {
+//             #picture_image {
+//               display: none;
+//             }
+//             .fa-picture-o {
+//               font-size: 20px;
+//               color: white;
+//               margin-left: 28px; 
+//             }
+//             .fa-tags {
+//               font-size: 20px;
+//               color: white;
+//               margin-left: 28px; 
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
 
 .indicate-tag {
   position: relative;
@@ -114,10 +135,11 @@ header {
   &__content {
     width: 100%;
     height: calc(100vh - 200px);
+    overflow: scroll;
     &__serch-pic {
       position: relative;
       height: 50px;
-      margin: 0px 14px 0px 17px;
+      margin: 0px 14px 15px 17px;
       &__nav {
         position: absolute;
         padding-top: 15px;
@@ -139,9 +161,15 @@ header {
       }
     }
     .pictures {
+      display: flex;
+      flex-wrap: wrap; 
+      justify-content: space-between;
+      margin: 0 auto;
+      padding: 0 15px;
       .picture {
         width: auto;
-        margin: 0 auto;
+        margin: 10px 15px 0 0;
+
         &__box {
           margin: 0 20px 20px 0;
         }
