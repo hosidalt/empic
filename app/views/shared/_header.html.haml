@@ -7,12 +7,18 @@
       %form{ class: 'input-search' }
         %input{ placeholder: "タグから探す"}
         %i.fa.fa-search
-      .header-main__top__right
-        %ul.right__block.clearfix
-          %li.right__block--element.clearfix
-            %i.fa.fa-picture-o 
-          %li.right__block--element.clearfix
-            %i.fa.fa-tags
+    .header-main__setting.clearfix
+      .header-main__setting__right
+        -# .right__block--element.clearfix
+        -#   %i.fa.fa-tags
+        = form_for (@picture) do |f|
+          %ul.block-post-pictur
+            %li.block-post-pictur__select
+              %label{for: 'picture_image'}
+                = f.file_field :image
+            %li.block-post-pictur__select
+              =f.submit "投稿", class: 'submit'
+
 
 %nav.indicate-tag
   .indicate-tag__content
