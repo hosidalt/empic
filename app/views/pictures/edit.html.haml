@@ -1,0 +1,16 @@
+%html
+  %body
+    .empic-container
+      = render 'shared/header'
+
+      %main.pic.clearfix
+        %section.pic__container
+          %section.pic__container__content
+            = image_tag @picture.image.url, class: 'picture-block'
+          %section.pic__container__edit
+            =form_with model: @picture do |f|
+              .pic-comment
+                = f.text_area :comment, placeholder: "コメント", class: 'textarea-default'
+            =form_with url: pictures_path do |f|
+              .pic-tag
+                = f.text_field :tag, class: 'input-default'
