@@ -11,6 +11,11 @@
             =form_with model: @picture do |f|
               .pic-comment
                 = f.text_area :comment, placeholder: "コメント", class: 'textarea-default'
-            =form_with url: pictures_path do |f|
               .pic-tag
-                = f.text_field :tag, class: 'input-default'
+                = f.text_field :tag_list, value: @picture.tag_list.join(','), placeholder: "タグ", class: 'input-default'
+              .btn-content
+                = f.submit "登録する", class: 'btn-default btn-red'
+        .btn
+          = link_to "topに戻る", root_path, class: 'btn-default btn-gry'
+
+      = render 'shared/footer'

@@ -21,8 +21,15 @@ class PicturesController < ApplicationController
     @picture = Picture.find(params[:id])
   end
 
+  def update
+    picture = Picture.find(params[:id])
+    picture.update(picture_params)
+    redirect_to picture_path
+  end
+
   private
+
     def picture_params
-      params.require(:picture).permit(:image, :comment)
+      params.require(:picture).permit(:image, :comment, :tag_list)
     end
 end
