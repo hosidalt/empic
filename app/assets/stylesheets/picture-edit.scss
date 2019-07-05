@@ -1,5 +1,6 @@
 .pic {
-  flex: 0 0 auto;
+  height: 135vh;
+  overflow: scroll;
   &__container {
     width: 100%;
     margin: 0 auto;
@@ -16,10 +17,11 @@
     }
     &__edit {
       text-align: center;
-      margin: 0 20px 20px 0;
+      margin: 20px 0;
+      padding: 30px;
       .pic-comment {
         .textarea-default {
-          width: 100%;
+          width: 97%;
           max-width: 100%;
           min-height: 104px;
           padding: 10px;
@@ -32,7 +34,7 @@
       .pic-tag {
         margin: 30px 0;
         .input-default {
-          width: 100%;
+          width: 97%;
           height: 38px;
           padding: 10px 10px 8px;
           border-radius: 4px;
@@ -42,21 +44,44 @@
           font-size: 16px;
         }
       }
+      .btn-content {
+        padding: 30px 0;
+        .btn-default {
+          width: 500px;
+          line-height: 48px;
+          font-size: 14px;
+          border: 1px solid transparent;
+          transition: all ease-out .3s;
+        }
+        .btn-red {
+          background: #ea352d;
+          border: 1px solid #ea352d;
+          color: #fff;
+        }
+      }
+    }
+
+  }
+  .btn {
+    text-align: center;
+    margin: 20px 0;
+    padding: 10px 0;
+    .btn-default {
+      display: block;
+      line-height: 48px;
+      font-size: 14px;
+      border: 1px solid transparent;
+      transition: all ease-out .3s;
+    }
+    .btn-gry {
+      margin: 0 auto;
+      width: 250px;
+      background: #aaa;
+      border: 1px solid #aaa;
+      color: #fff;
+      text-decoration: none;
     }
   }
 
 }
 
-
-// %main.pic.clearfix
-// %section.pic__container
-//   .pic__container__content
-//     = image_tag @picture.image.url, class: 'de-block'
-
-//   .pic__container__edit
-//     =form_with url: pictures_path do |f|
-//       .pic-tag
-//         = f.text_field :tag, class: 'tag-name'
-    //     =form_with model: @picture do |f|
-//       .pic-comment
-//         = f.text_area :comment, class: 'details-box'
