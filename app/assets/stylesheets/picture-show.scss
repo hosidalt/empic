@@ -1,0 +1,38 @@
+.pic__container__show {
+  margin: 20px 0;
+  .pic-comment {
+    padding: 30px;
+    border-top: 1px solid #eee;
+    &__box {
+      padding: 20px;
+    }
+  }
+  .pic-tag {
+    padding: 30px;
+    border-top: 1px solid #eee;
+    &__box {
+      padding: 20px;
+      .tag-name:first-child {
+        margin-left: 0
+      }
+      .tag-name {
+        margin: 5px;
+        padding: 5px;
+        background: #7FCCE3;
+        color: 	#FFFFFF;
+        border-radius: 2px;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .title-deco {
+    display: inline-block;
+    color: #333; 
+    border: 1px solid #f5f5f5;
+    background: #f5f5f5;
+    padding: 8px 16px;
+    border-radius: 2px;
+    font-size: 16px;
+  }
+}
