@@ -2,15 +2,17 @@ class PicturesController < ApplicationController
   def index
     @pictures = Picture.all
     @picture = Picture.new
+    if params[:tag_name]
+      @pictures = @pictures.tagged_with(params[:tag_name])
+    else
+      @pictures = Picture.all
+    end
   end
 
   def create
     @picture = Picture.new(picture_params)
     @picture.save
     redirect_to pictures_path
-      # if @picture.save
-      #   redirect_to pictures_path, notice: "画像が保存されました"
-      # end
   end
 
   def edit
