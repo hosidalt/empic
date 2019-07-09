@@ -4,13 +4,13 @@
       %h1
         =link_to root_path, class: 'title' do
           empic
-      %form{ class: 'input-search' }
-        %input{ placeholder: "タグから探す"}
-        %i.fa.fa-search
+      = form_tag pictures_path, class: 'input-search', :method =>'get' do
+        = text_field_tag :search, params[:search], class: 'input-search__form', placeholder: "検索"
+        = button_tag type: :submit, :name => nil, class: 'btn-t' do
+          %i.fa.fa-search
     .header-main__setting.clearfix
       .header-main__setting__right
-        -# .right__block--element.clearfix
-        -#   %i.fa.fa-tags
+
         = form_for (@picture) do |f|
           %ul.block-post-pictur
             %li.block-post-pictur__select
