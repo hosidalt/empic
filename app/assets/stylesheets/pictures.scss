@@ -45,7 +45,7 @@ header {
         position: relative;
         margin-left: 480px;
       }
-      .input-search input {
+      .input-search__form {
         min-width: 400px;
         padding: 8px 15px 7px 8px;
         background-color: white;
@@ -70,6 +70,13 @@ header {
         background: rgb(102, 102, 102);
         color: rgb(255, 255, 255);
         cursor: pointer;
+      }
+      .btn-t {
+        position: absolute;
+        right: 0;
+        padding: 8px 0 7px 7px;
+        border-radius: 3px;
+        line-height: 20px;
       }
     }
     &__setting {
