@@ -132,15 +132,17 @@ header {
           display: inline-block;
           &__data {
             background-color: #eee;
-            color: #666;
             display: inline-block;
             position: relative;
             line-height: 32px;
             padding: 0 20px;
             border-radius: 16px;
-            font-weight: bold;
-            font-size: 12px;
             margin-right: 16px;
+            .order-box {
+              color: #666;
+              font-size: 12px;
+              font-weight: bold;
+            }
           }
         }
       }
@@ -204,4 +206,8 @@ footer {
     margin: 0 20px;
     color: white;
   }
+}
+
+a {
+  text-decoration: none;
 }

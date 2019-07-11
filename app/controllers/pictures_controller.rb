@@ -31,13 +31,6 @@ class PicturesController < ApplicationController
     redirect_to pictures_path
     end
 
-  # def select
-  #   if params[:tag_name]
-  #     @pictures = @pictures.tagged_with(params[:tag_name])
-  #   else
-  #     @pictures = Picture.all
-  # end
-
   private
 
     def picture_params

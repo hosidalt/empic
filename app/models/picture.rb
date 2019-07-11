@@ -11,6 +11,5 @@ class Picture < ApplicationRecord
     end
   end
   
-
   validates :image, presence: true
 end
