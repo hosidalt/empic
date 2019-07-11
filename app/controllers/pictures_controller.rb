@@ -1,12 +1,8 @@
 class PicturesController < ApplicationController
   def index
-    @pictures = Picture.all
     @picture = Picture.new
-    if params[:tag_name]
-      @pictures = @pictures.tagged_with(params[:tag_name])
-    else
-      @pictures = Picture.all
-    end
+    @pictures = Picture.all.includes(:tags)
+    @pictures = Picture.search(params[:search])
   end
 
   def create
@@ -29,9 +25,16 @@ class PicturesController < ApplicationController
     redirect_to picture_path
   end
 
+  def destroy
+    @picture = Picture.find(params[:id])
+    @picture.destroy
+    redirect_to pictures_path
+    end
+
   private
 
     def picture_params
       params.require(:picture).permit(:image, :comment, :tag_list)
     end
+
 end

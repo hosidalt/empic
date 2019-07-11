@@ -1,1 +1,10 @@
-
+.picture
+  = image_tag picture.image.thumb.url, class: 'picture__box' if picture.image.present?
+  .more
+    %ul.more__list
+      %li
+      =link_to "詳細", picture_path(picture), class: 'more__list__select', method: :get
+      %li
+      =link_to "編集", edit_picture_path(picture), class: 'more__list__select', method: :get
+      %li
+      =link_to "削除", picture_path(picture), class: 'more__list__select', method: :delete

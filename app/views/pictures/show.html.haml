@@ -19,7 +19,7 @@
               .pic-tag__box
                 - @picture.tags.each do |tag|
                   %span
-                    = link_to tag, pictures_path(tag_name: tag.name), class: 'tag-name'
+                    = link_to tag, selects_path(tag_name: tag.name), class: 'tag-name'
         .btn
           = link_to "topに戻る", root_path, class: 'btn-default btn-gry'
 

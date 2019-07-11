@@ -9,16 +9,16 @@
               %ul.select-pic
                 -# %li.select-pic__data
                 -#   %span.select-pic__data__text
-                -#     =link_to "新しい順", pictures_path, class: 'order-box'
+                -#     新しい順
                 -# %li.select-pic__data
                 -#   %span.select-pic__data__text
-                -#     =link_to "古い順", pictures_path, class: 'order-box'
+                -#     古い順
 
           %ul.top__serch-pic__tag.clearfix
 
           %section.pictures
-            = render partial: 'picture', collection: @pictures
+            = render partial: 'pictures/picture', collection: @pictures
 
           %ul.pager
             %li.pager__num
-      = render 'shared/footer'
+    = render 'shared/footer'
