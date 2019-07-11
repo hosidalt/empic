@@ -7,19 +7,17 @@
           %section.top__content__serch-pic
             %nav.top__content__serch-pic__nav
               %ul.select-pic
-                %li.select-pic__data
-                  %span.select-pic__data__text
-                    新しい順
-                %li.select-pic__data
-                  %span.select-pic__data__text
-                    古い順
+                -# %li.select-pic__data
+                -#   %span.select-pic__data__text
+                -#     新しい順
+                -# %li.select-pic__data
+                -#   %span.select-pic__data__text
+                -#     古い順
 
           %ul.top__serch-pic__tag.clearfix
 
-
-            -# = render @pictures
-            -# = render partial: 'picture', collection: @pictures
-            -# = render partial: "picture", collection: @pictures
+          %section.pictures
+            = render partial: 'pictures/picture', collection: @pictures
 
           %ul.pager
             %li.pager__num

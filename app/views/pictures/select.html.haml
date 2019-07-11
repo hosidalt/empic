@@ -15,24 +15,21 @@
                     古い順
 
           %ul.top__serch-pic__tag.clearfix
+          
+          = render 'picture'
 
-          -# %section.pictures
-          -#   - @pictures.each do |picture|
-          -#     .picture
-          -#       = image_tag picture.image.thumb.url, class: 'picture__box' if picture.image.present?
-          -#       .more
-          -#         %ul.more__list
-          -#           %li
-          -#           =link_to "詳細", picture_path(picture), class: 'more__list__select', method: :get
-          -#           %li
-          -#           =link_to "編集", edit_picture_path(picture), class: 'more__list__select', method: :get
-          -#           %li
-          -#           =link_to "削除", picture_path(picture), class: 'more__list__select', method: :delete
-
-            -# = render @pictures
-            -# = render partial: 'picture', collection: @pictures
-            -# = render partial: "picture", collection: @pictures
-
+          %section.pictures
+            - @pictures.each do |picture|
+              .picture
+                = image_tag picture.image.thumb.url, class: 'picture__box' if picture.image.present?
+                .more
+                  %ul.more__list
+                    %li
+                    =link_to "詳細", picture_path(picture), class: 'more__list__select', method: :get
+                    %li
+                    =link_to "編集", edit_picture_path(picture), class: 'more__list__select', method: :get
+                    %li
+                    =link_to "削除", picture_path(picture), class: 'more__list__select', method: :delete
           %ul.pager
             %li.pager__num
-    = render 'shared/footer'
+      = render 'shared/footer'
