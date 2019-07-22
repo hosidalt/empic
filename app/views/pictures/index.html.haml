@@ -22,3 +22,6 @@
           %ul.pager
             %li.pager__num
       = render 'shared/footer'
+      = link_to tags_path, class: 'l_tags' do
+        %p タグ一覧
+        = fa_icon('tags')

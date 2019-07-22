@@ -211,3 +211,22 @@ footer {
 a {
   text-decoration: none;
 }
+
+.l_tags {
+  text-align: center;
+  background-color: #e478ff;
+  height: 140px;
+  width: 140px;
+  border-radius: 50%;
+  color: white;
+  position: fixed;
+  bottom: 100px;
+  right: 30px;
+  p {
+    font-size: 22px;
+    margin-top: 32px;
+  }
+  i {
+    font-size: 50px;
+  }
+}

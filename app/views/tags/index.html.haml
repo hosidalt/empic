@@ -14,20 +14,8 @@
           .header-main__setting.clearfix
             .header-main__setting__right
 
-              -# = form_for (@picture) do |f|
-              -#   %ul.block-post-pictur
-              -#     %li.block-post-pictur__select
-              -#       %label{for: 'picture_image'}
-              -#         = f.file_field :image
-              -#     %li.block-post-pictur__select
-              -#       =f.submit "投稿", class: 'submit'
-
-
-      -# %nav.indicate-tag
-      -#   .indicate-tag__content
-
       %main.top.clearfix
-        .top__content
+        .tags__content
           .pic-tag__box
             - @tags.each do |tag|
               %span
@@ -41,5 +29,3 @@
           %ul.pager
             %li.pager__num
     = render 'shared/footer'
-
-

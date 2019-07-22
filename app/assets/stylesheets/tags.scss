@@ -1,3 +1,9 @@
+.tags__content {
+  width: 100%;
+  height: calc(100vh - 200px);
+  margin: 10px;
+  overflow: scroll;
+}
 .tag-name {
   margin: 5px;
   padding: 5px;
